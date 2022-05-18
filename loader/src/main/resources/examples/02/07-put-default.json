@@ -1,0 +1,38 @@
+{
+  "settings": {
+    "number_of_shards" : 1,
+    "number_of_replicas" : 0,
+
+    "analysis": {
+      "filter": {
+        "english_stemmer" : {
+          "type" : "stemmer",
+          "name" : "english"
+        },
+        "custom_stop": {
+          "type": "stop",
+          "stopwords": "_english_"
+        },
+        "en_US": {
+          "type": "hunspell",
+          "language": "en_US"
+        }
+      },
+      "analyzer": {
+        "custom_analyzer": {
+          "tokenizer": "standard",
+          "filter": [ "lowercase", "custom_stop", "en_US" ],
+          "char_filter":  [ "html_strip" ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "my_field": {
+        "type": "text",
+        "analyzer": "custom_analyzer"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "settings": {
+    "number_of_shards" : 1,
+    "number_of_replicas" : 0,
+
+    "analysis": {
+      "filter": {
+        "custom_stop": {
+          "type": "stop",
+          "stopwords": [ "is", "there", "for", "its", "the", "from" ]
+        }
+      },
+      "analyzer": {
+        "custom_analyzer": {
+          "tokenizer": "standard",
+          "filter": [ "lowercase", "custom_stop" ],
+          "char_filter":  [ "html_strip" ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "my_field": {
+        "type": "text",
+        "analyzer": "custom_analyzer"
+      }
+    }
+  }
+}

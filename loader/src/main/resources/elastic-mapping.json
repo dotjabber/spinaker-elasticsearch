@@ -1,0 +1,17 @@
+{
+  "document": {
+    "properties": {
+      "file": { "type": "text", "fielddata": true },
+      "chapter_id": { "type": "text", "fielddata": true },
+      "speaker_id": { "type": "text", "fielddata": true },
+      "speaker_name": { "type": "text", "fielddata": true },
+      "language": { "type": "text", "fielddata": true },
+      "content_analyzed": { "type": "text", "fielddata": true, "analyzer": "standard" },
+      "content_standard": { "type": "text", "fielddata": true, "analyzer": "standard" },
+      "date": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis"
+      }
+    }
+  }
+}
