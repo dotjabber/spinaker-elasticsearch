@@ -1,0 +1,24 @@
+{
+  "settings": {
+    "number_of_shards" : 1,
+    "number_of_replicas" : 0,
+
+    "analysis": {
+      "analyzer": {
+        "custom_analyzer": {
+          "tokenizer": "standard",
+          "filter": [ "lowercase" ],
+          "char_filter":  [ "html_strip" ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "my_field": {
+        "type": "text",
+        "analyzer": "custom_analyzer"
+      }
+    }
+  }
+}

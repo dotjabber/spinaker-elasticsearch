@@ -1,0 +1,10 @@
+{
+  "query": {
+    "match_phrase": { "content": "war in iraq" }
+  },
+  "highlight": {
+    "fields": {
+      "content": {}
+    }
+  }
+}
