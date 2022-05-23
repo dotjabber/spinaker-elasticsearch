@@ -1,3 +1,6 @@
+url: https://localhost:9200/_analyze
+header: Content-type: application/json
+body:
 {
   "tokenizer": "standard",
   "text": "<b>The Big Bang</b> theory is the prevailing cosmological model for the universe from the earliest known periods through its subsequent large-scale evolution."

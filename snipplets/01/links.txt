@@ -1,0 +1,4 @@
+https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html
+https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-charfilters.html
+https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenfilters.html
+https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-mapping-charfilter.html

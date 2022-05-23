@@ -1,3 +1,6 @@
+url: https://localhost:9200/euparl/_search
+header: Content-type: application/json
+body:
 {
   "query": {
     "match": {

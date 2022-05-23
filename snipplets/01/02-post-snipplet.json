@@ -1,3 +1,6 @@
+url: https://localhost:9200/_analyze
+header: Content-type: application/json
+body:
 {
   "tokenizer": "standard",
   "filter":  [ "lowercase" ],
